@@ -31,9 +31,16 @@ chmod +x /etc/initramfs-tools/hooks/root-ro
 echo Updating initramfs ...
 update-initramfs -u
 
+if ! grep GRUB_CMDLINE_LINUX /etc/default/grub | grep -q "fastboot" ; then
+  echo Adding fastboot parameter to /etc/default/grub ...
+  sed -e 's/^GRUB_CMDLINE_LINUX_DEFAULT="/GRUB_CMDLINE_LINUX_DEFAULT="fastboot /' -i /etc/default/grub
+  echo Updating grub.cfg ...
+  update-grub
+fi
+
 if ! grep GRUB_CMDLINE_LINUX /etc/default/grub | grep -q "root-ro-driver=overlay" ; then
   echo Adding root-ro-driver parameter to /etc/default/grub ...
-  sed -e 's/^GRUB_CMDLINE_LINUX_DEFAULT="/GRUB_CMDLINE_LINUX_DEFAULT=" root-ro-driver=overlay /' -i /etc/default/grub
+  sed -e 's/^GRUB_CMDLINE_LINUX_DEFAULT="/GRUB_CMDLINE_LINUX_DEFAULT="root-ro-driver=overlay /' -i /etc/default/grub
   echo Updating grub.cfg ...
   update-grub
 fi
