@@ -5,4 +5,3 @@
 
 copy_exec /usr/sbin/fsck
 copy_exec /usr/sbin/fsck.ext4
-copy_exec /usr/sbin/fsck.vfat
