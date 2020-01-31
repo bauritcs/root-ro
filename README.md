@@ -1,19 +1,23 @@
-Read-only root filesystem for Raspbian Stretch
-============================================
-This repository contains some useful files that allow you to use a Raspberry PI using a readonly filesystem.
+Read-only root filesystem for ~~Raspbian Stretch~~Debian Buster with sysvinit
+=============================================================================
+This repository contains some useful files that allow you to use a Debian Buster system with sysvinit using a readonly filesystem.
 After running install.sh everything will be set up and the system will reboot into read-only mode.
 
 See instructions below to see how to switch to permanent or temporary write-mode.
 
-This script is tested with a freshly deployed Raspbian image with "desktop and recommended software", specifically with the img file dated 2018-11-13, kernel 4.14. (Tested on a Rpi 3B+). It has also been tested on a recent Rasbian image (Buster) on a Rpi 4B.
+This script is tested with a freshly deployed Debian Buster minimal image.
 
 This files contains some ideas and code of the following projects:
+- https://github.com/JasperE84/root-ro
 - https://github.com/josepsanzcamp/root-ro
 - https://gist.github.com/niun/34c945d70753fc9e2cc7
 - https://github.com/chesty/overlayroot
-- Random-seed contribution by texahic
+~~- Random-seed contribution by texahic~~
 
 Congratulate the original authors if these files work as expected. 
+
+Note: The text below hasn't been adapted/updated yet. This is WiP.
+======
 
 Why use a read-only root filesystem
 =====
