@@ -113,8 +113,8 @@ fi
 # ${ROOT} and ${rootmnt} are predefined by caller of this script. Note that
 # the root fs ${rootmnt} it mounted readonly on the initrams, which fits nicely
 # for our purposes.
-ROOT_RO=/mnt/root-ro
-ROOT_RW=/mnt/root-rw
+ROOT_RO=/overlay/root-ro
+ROOT_RW=/overlay/root-rw
 ROOT_RW_UPPER=${ROOT_RW}/upper
 ROOT_RW_WORK=${ROOT_RW}/work
 

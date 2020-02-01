@@ -65,10 +65,10 @@ Enabling temporary write access mode:
 ============
 Write access can be enabled using following command.
 ```
-sudo mount -o remount,rw /mnt/root-ro
+sudo mount -o remount,rw /overlay/root-ro
 # next command enables DNS in chroot because resolvconf service needs to read /run/resolvconf/resolv.conf
-sudo mount -o bind /run /mnt/root-ro/run
-chroot /mnt/root-ro
+sudo mount -o bind /run /overlay/root-ro/run
+chroot /overlay/root-ro
 ```
 
 
@@ -77,7 +77,7 @@ Exiting temporary write access mode:
 Exit the chroot and re-mounting the filesystem:
 ```
 exit
-sudo mount -o remount,ro /mnt/root-ro
+sudo mount -o remount,ro /overlay/root-ro
 ```
 
 Original state

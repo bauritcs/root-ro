@@ -9,6 +9,11 @@ if [ "$(id -u)" != "0" ]; then
   exit 1
 fi
 
+if ! [ -d /overlay ] ; then
+  echo Creating \"/overlay\" mountpoint ...
+  mkdir /overlay
+fi
+
 if ! grep -q "^overlay" /etc/initramfs-tools/modules; then
   echo Adding \"overlay\" to /etc/initramfs-tools/modules ...
   echo overlay >> /etc/initramfs-tools/modules
