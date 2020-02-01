@@ -12,7 +12,7 @@ This files contains some ideas and code of the following projects:
 - https://github.com/josepsanzcamp/root-ro
 - https://gist.github.com/niun/34c945d70753fc9e2cc7
 - https://github.com/chesty/overlayroot
-~~- Random-seed contribution by texahic~~
+- ~~Random-seed contribution by texahic~~ - removed this due to not using Systemd here; TODO: Someone needs to check if there's a better (init-system-agnostic) replacement
 
 Congratulate the original authors if these files work as expected. 
 
